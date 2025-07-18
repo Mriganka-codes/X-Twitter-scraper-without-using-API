@@ -1,6 +1,6 @@
 # Twitter Scraper
 
-A Python-based Twitter scraper that automatically scrapes tweets containing specific keywords every 24 hours without using the Twitter API.
+A Selenium and Python-based Twitter scraper that automatically scrapes tweets containing specific keywords every 24 hours without using the Twitter API. A twitter account will be required for login.
 
 ## Features
 
@@ -39,8 +39,8 @@ twitter_scraper/
    pip install -r requirements.txt
    ```
 
-3. **Install Chrome browser** (if not already installed)
-   - The scraper uses Chrome WebDriver which will be automatically downloaded
+3. **Install Chrome browser and chromedriver** (if not already installed)
+   - The scraper uses Chrome WebDriver which needs to be downloaded from https://googlechromelabs.github.io/chrome-for-testing/
    - Make sure Chrome browser is installed on your system
 
 4. **Configure environment variables**
@@ -93,13 +93,8 @@ python scraper.py
 The scraped tweets are saved to `data/scraped_tweets.csv` with the following columns:
 
 - `text`: Tweet content
-- `username`: Twitter username
-- `display_name`: User's display name
 - `timestamp`: Tweet timestamp
 - `url`: Direct link to the tweet
-- `replies`: Number of replies
-- `retweets`: Number of retweets
-- `likes`: Number of likes
 - `keyword`: The keyword that matched this tweet
 - `scraped_at`: When the tweet was scraped
 
@@ -151,12 +146,6 @@ CMD ["python", "scheduler.py"]
 - **Rate Limiting**: The scraper includes delays to avoid overwhelming Twitter's servers
 - **Data Privacy**: Be mindful of the data you collect and how you use it
 - **Robots.txt**: Consider Twitter's robots.txt file
-
-### Technical Limitations
-- **Dynamic Content**: Twitter heavily uses JavaScript, so Selenium is required
-- **Rate Limiting**: Twitter may block requests if too frequent
-- **Layout Changes**: Twitter's layout changes may break selectors
-- **Login Requirements**: Some content may require authentication
 
 ### Troubleshooting
 

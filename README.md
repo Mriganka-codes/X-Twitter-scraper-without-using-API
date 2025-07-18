@@ -54,7 +54,7 @@ twitter_scraper/
 ### Environment Variables (.env file)
 
 - `TWITTER_KEYWORDS`: Comma-separated list of keywords to search for
-- `MAX_TWEETS_PER_KEYWORD`: Maximum number of tweets to scrape per keyword (default: 50)
+- `MAX_TWEETS_PER_KEYWORD`: Maximum number of tweets to scrape per keyword (default: 50)( **YOU HAVE TO MODIFY THIS IN CONFIG.PY AND NOT .ENV FILE**)
 - `SCRAPE_TIME`: Time to run daily scraping in 24-hour format (default: 09:00)
 - `HEADLESS_MODE`: Run browser in headless mode (default: true)
 - `BROWSER_TIMEOUT`: Browser timeout in seconds (default: 30)

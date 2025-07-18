@@ -45,7 +45,7 @@ class TwitterScraper:
             chrome_options.add_argument("--window-size=1920,1080")
             chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
             
-            webdriver_path = r"D:\attachments\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+            webdriver_path = r"your_webdriver_executable"
             service = Service(executable_path=webdriver_path)
             
             self.driver = webdriver.Chrome(service=service, options=chrome_options)
